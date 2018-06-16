@@ -39,7 +39,7 @@
           }
         } ],
         "responses" : {
-          "200" : {
+          "201" : {
             "description" : "Transferencia bancaria exitosa",
             "schema" : {
               "$ref" : "#/definitions/ResponseOKDTO"
