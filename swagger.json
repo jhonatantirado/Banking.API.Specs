@@ -20,7 +20,7 @@
     "description" : "Clientes"
   }, {
     "name" : "Banking Transactions",
-    "description" : "Transacciones bancarias"
+    "description" : "Transacciones bancarias x"
   } ],
   "paths" : {
     "/api/transfers" : {
