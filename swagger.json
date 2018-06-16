@@ -97,7 +97,7 @@
       "properties" : {
         "message" : {
           "type" : "string",
-          "description" : null
+          "description" : "error message"
         }
       }
     },
