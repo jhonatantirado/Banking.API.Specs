@@ -52,7 +52,7 @@
             }
           },
           "500" : {
-            "description" : "Error controlado",
+            "description" : "Error no controlado",
             "schema" : {
               "$ref" : "#/definitions/ResponseErrorDTO"
             }
