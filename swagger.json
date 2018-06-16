@@ -23,7 +23,12 @@
     "description" : "Transacciones bancarias"
   } ],
   "paths" : {
-    "/transfers" : {
+    "/api/customers/register" : {
+      "post" : {
+        "tags" : [ "Customer" ]
+      }
+    },
+    "/api/transfers" : {
       "post" : {
         "tags" : [ "Banking Transactions" ],
         "summary" : "transferencia bancaria de una cuenta a otra",
