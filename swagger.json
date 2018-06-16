@@ -1,0 +1,125 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Especificación API de aplicación para banca en línea",
+    "version" : "1.0.0",
+    "title" : "Online Banking API 1.0",
+    "contact" : {
+      "email" : "info@ads2018.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags" : [ {
+    "name" : "Account",
+    "description" : "Cuentas bancarias"
+  }, {
+    "name" : "Customer",
+    "description" : "Clientes"
+  }, {
+    "name" : "Banking Transactions",
+    "description" : "Transacciones bancarias"
+  } ],
+  "paths" : {
+    "/transfers" : {
+      "post" : {
+        "tags" : [ "Banking Transactions" ],
+        "summary" : "transferencia bancaria de una cuenta a otra",
+        "description" : "transferir dinero de una cuenta origen a una cuenta destino",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestBankTransferDto",
+          "description" : "DTO para la transferencia bancaria",
+          "schema" : {
+            "$ref" : "#/definitions/RequestBankTransferDto"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Transferencia bancaria exitosa",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ResponseErrorDTO" : {
+      "type" : "object",
+      "properties" : {
+        "httpStatus" : {
+          "type" : "integer",
+          "default" : 400
+        },
+        "errors" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ApplicationMessage"
+          },
+          "minItems" : 1,
+          "maxItems" : 100
+        }
+      }
+    },
+    "ResponseOKDTO" : {
+      "type" : "object",
+      "properties" : {
+        "httpStatus" : {
+          "type" : "integer",
+          "default" : 201
+        },
+        "message" : {
+          "type" : "string",
+          "default" : "Transfer done!"
+        }
+      }
+    },
+    "ApplicationMessage" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RequestBankTransferDto" : {
+      "type" : "object",
+      "required" : [ "fromAccountNumber", "toAccountNumber", "amount" ],
+      "properties" : {
+        "fromAccountNumber" : {
+          "type" : "string",
+          "description" : "cuenta origen",
+          "example" : "123-456-001"
+        },
+        "toAccountNumber" : {
+          "type" : "string",
+          "description" : "cuenta destino",
+          "example" : "123-456-002"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 100.0,
+          "minimum" : 0,
+          "maximum" : 1000,
+          "description" : "monto de dinero a transferir en moneda local (soles peruanos), mayor a CERO y menor a 1000"
+        }
+      }
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/jhonatan.tirado/BankingApplication/1.0.0",
+  "schemes" : [ "https" ]
+}
