@@ -23,11 +23,6 @@
     "description" : "Transacciones bancarias"
   } ],
   "paths" : {
-    "/api/customers/register" : {
-      "post" : {
-        "tags" : [ "Customer" ]
-      }
-    },
     "/api/transfers" : {
       "post" : {
         "tags" : [ "Banking Transactions" ],
