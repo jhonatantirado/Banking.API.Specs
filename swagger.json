@@ -98,7 +98,7 @@
     "/api/transfers" : {
       "post" : {
         "tags" : [ "Banking Transactions" ],
-        "summary" : "transferencia bancaria de una cuenta a otra",
+        "summary" : "Transferencia bancaria de una cuenta a otra",
         "description" : "transferir dinero de una cuenta origen a una cuenta destino",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
