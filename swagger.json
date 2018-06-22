@@ -146,9 +146,6 @@
         },
         "lastName" : {
           "type" : "string"
-        },
-        "bankAccountDTO" : {
-          "type" : "object"
         }
       }
     },
