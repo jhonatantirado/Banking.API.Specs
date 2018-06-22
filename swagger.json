@@ -33,14 +33,14 @@
         "parameters" : [ {
           "in" : "body",
           "name" : "RequestCustomerDto",
-          "description" : "DTO para la transferencia bancaria",
+          "description" : "DTO cliente",
           "schema" : {
             "$ref" : "#/definitions/RequestCustomerDTO"
           }
         } ],
         "responses" : {
           "201" : {
-            "description" : "Transferencia bancaria exitosa",
+            "description" : "Cliente creado",
             "schema" : {
               "$ref" : "#/definitions/ResponseOKDTO"
             }
