@@ -137,6 +137,17 @@
         }
       }
     },
+    "RequestCustomerDTO" : {
+      "type" : "object",
+      "properties" : {
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        }
+      }
+    },
     "RequestBankTransferDto" : {
       "type" : "object",
       "required" : [ "fromAccountNumber", "toAccountNumber", "amount" ],
