@@ -57,6 +57,40 @@
             }
           }
         }
+      },
+      "put" : {
+        "tags" : [ "Customer" ],
+        "description" : "actualización de cliente",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestCustomerDto",
+          "description" : "DTO para la transferencia bancaria",
+          "schema" : {
+            "$ref" : "#/definitions/RequestCustomerDTO"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Transferencia bancaria exitosa",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
       }
     },
     "/api/transfers" : {
