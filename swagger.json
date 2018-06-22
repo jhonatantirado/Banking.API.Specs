@@ -152,6 +152,21 @@
         }
       }
     },
+    "RequestBankAccountDTO" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "number" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "type" : "number",
+          "format" : "float"
+        }
+      }
+    },
     "RequestBankTransferDto" : {
       "type" : "object",
       "required" : [ "fromAccountNumber", "toAccountNumber", "amount" ],
