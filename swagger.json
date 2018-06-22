@@ -34,7 +34,7 @@
           "name" : "RequestBankTransferDto",
           "description" : "DTO para la transferencia bancaria",
           "schema" : {
-            "$ref" : "#/definitions/RequestBankTransferDto"
+            "$ref" : "#/definitions/RequestCustomerDTO"
           }
         } ],
         "responses" : {
