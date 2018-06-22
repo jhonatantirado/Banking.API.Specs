@@ -23,6 +23,42 @@
     "description" : "Transacciones bancarias x"
   } ],
   "paths" : {
+    "/api/customer" : {
+      "post" : {
+        "tags" : [ "Customer" ],
+        "description" : "creación de cliente",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestBankTransferDto",
+          "description" : "DTO para la transferencia bancaria",
+          "schema" : {
+            "$ref" : "#/definitions/RequestBankTransferDto"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Transferencia bancaria exitosa",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
+    },
     "/api/transfers" : {
       "post" : {
         "tags" : [ "Banking Transactions" ],
