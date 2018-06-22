@@ -148,7 +148,7 @@
           "type" : "string"
         },
         "bankAccountDTO" : {
-          "type" : "RequestBankAccountDTO"
+          "type" : "object"
         }
       }
     },
