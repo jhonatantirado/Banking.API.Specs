@@ -31,7 +31,7 @@
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
-          "name" : "RequestBankTransferDto",
+          "name" : "RequestCustomerDto",
           "description" : "DTO para la transferencia bancaria",
           "schema" : {
             "$ref" : "#/definitions/RequestCustomerDTO"
