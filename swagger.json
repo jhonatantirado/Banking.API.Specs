@@ -148,7 +148,7 @@
           "type" : "string"
         },
         "bankAccountDTO" : {
-          "type" : "object"
+          "type" : "RequestBankAccountDTO"
         }
       }
     },
@@ -156,7 +156,8 @@
       "type" : "object",
       "properties" : {
         "id" : {
-          "type" : "integer"
+          "type" : "integer",
+          "format" : "int32"
         },
         "number" : {
           "type" : "string"
