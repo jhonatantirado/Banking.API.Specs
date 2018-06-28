@@ -175,7 +175,7 @@
     },
     "RequestCustomerDTO" : {
       "type" : "object",
-      "required" : [ "firstName", "lastName", "documentNumber", "isActive" ],
+      "required" : [ "firstName", "lastName", "birthDate", "documentNumber", "isActive" ],
       "properties" : {
         "firstName" : {
           "type" : "string"
@@ -188,6 +188,10 @@
           "format" : "date",
           "description" : "fecha de nacimiento"
         },
+        "documentNumber" : {
+          "type" : "string",
+          "description" : "número de DNI"
+        },
         "isActive" : {
           "type" : "string",
           "default" : true
@@ -197,10 +201,6 @@
         },
         "email" : {
           "type" : "string"
-        },
-        "documentNumber" : {
-          "type" : "string",
-          "description" : "número de DNI"
         }
       }
     },
