@@ -58,9 +58,7 @@
             }
           }
         }
-      }
-    },
-    "/api/customer/find" : {
+      },
       "get" : {
         "tags" : [ "Customer" ],
         "summary" : "Listar clientes",
@@ -76,7 +74,7 @@
           "in" : "query",
           "name" : "limit",
           "type" : "integer",
-          "description" : "Número de clientes a listar."
+          "description" : "Número de elementos a listar."
         } ],
         "responses" : {
           "201" : {
