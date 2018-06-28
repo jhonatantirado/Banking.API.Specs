@@ -408,19 +408,19 @@
       },
       "delete" : {
         "tags" : [ "Account" ],
-        "summary" : "Desactivar cliente.",
-        "description" : "Nunca se elimina un cliente. Cambia el campo IsActive a FALSE",
+        "summary" : "Desactivar cuenta bancaria.",
+        "description" : "Nunca se elimina un cuenta. Cambia el campo isLocked a TRUE",
         "parameters" : [ {
           "name" : "AccountId",
           "in" : "path",
-          "description" : "Customer ID a ser desactivado",
+          "description" : "Account ID a ser desactivado",
           "required" : true,
           "type" : "integer",
           "format" : "int64"
         } ],
         "responses" : {
           "201" : {
-            "description" : "Cliente desactivado",
+            "description" : "Cuenta bancaria desactivada",
             "schema" : {
               "$ref" : "#/definitions/ResponseOKDTO"
             }
