@@ -259,15 +259,15 @@
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
-          "name" : "RequestCustomerDto",
-          "description" : "DTO cliente",
+          "name" : "RequestBankAccountDTO",
+          "description" : "DTO cuenta bancaria",
           "schema" : {
             "$ref" : "#/definitions/RequestBankAccountDTO"
           }
         } ],
         "responses" : {
           "201" : {
-            "description" : "Cliente creado",
+            "description" : "Cuenta bancaria creada",
             "schema" : {
               "$ref" : "#/definitions/ResponseOKDTO"
             }
