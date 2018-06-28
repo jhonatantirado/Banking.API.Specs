@@ -69,7 +69,10 @@
           "201" : {
             "description" : "Lista de clientes",
             "schema" : {
-              "$ref" : "#/definitions/RequestCustomerDTO"
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RequestCustomerDTO"
+              }
             }
           },
           "400" : {
