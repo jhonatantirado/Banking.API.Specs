@@ -442,6 +442,31 @@
           }
         }
       }
+    },
+    "/api/token" : {
+      "post" : {
+        "tags" : [ "Security" ],
+        "responses" : {
+          "201" : {
+            "description" : "Token generado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
