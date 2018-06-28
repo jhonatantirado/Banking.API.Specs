@@ -117,8 +117,23 @@
           "format" : "int64"
         } ],
         "responses" : {
-          "200" : {
-            "description" : "OK"
+          "201" : {
+            "description" : "Cliente consultado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
           }
         }
       },
