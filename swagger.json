@@ -446,6 +446,8 @@
     "/api/token" : {
       "post" : {
         "tags" : [ "Security" ],
+        "summary" : "Generación de token de seguridad",
+        "description" : "generar token en base a usuario y contraseña",
         "responses" : {
           "201" : {
             "description" : "Token generado",
