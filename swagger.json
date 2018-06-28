@@ -13,7 +13,7 @@
     }
   },
   "tags" : [ {
-    "name" : "Account",
+    "name" : "Bank Account",
     "description" : "Cuentas bancarias"
   }, {
     "name" : "Customer",
@@ -252,7 +252,7 @@
     },
     "/api/account" : {
       "post" : {
-        "tags" : [ "Account" ],
+        "tags" : [ "Bank Account" ],
         "summary" : "Crear cuenta bancaria",
         "description" : "Crear una cuenta bancaria y asociarla a un cliente",
         "consumes" : [ "application/json" ],
@@ -287,7 +287,7 @@
         }
       },
       "get" : {
-        "tags" : [ "Account" ],
+        "tags" : [ "Bank Account" ],
         "summary" : "Listar cuentas bancarias",
         "description" : "consultar lista de cuentas bancarias paginadas",
         "consumes" : [ "application/json" ],
@@ -330,7 +330,7 @@
     },
     "/api/account/{AccountId}" : {
       "get" : {
-        "tags" : [ "Account" ],
+        "tags" : [ "Bank Account" ],
         "summary" : "Detalles de una cuenta bancaria",
         "description" : "Ver detalles de una cuenta bancaria",
         "consumes" : [ "application/json" ],
@@ -365,7 +365,7 @@
         }
       },
       "put" : {
-        "tags" : [ "Account" ],
+        "tags" : [ "Bank Account" ],
         "description" : "actualización de una cuenta bancaria",
         "summary" : "Actualizar cuenta bancaria",
         "consumes" : [ "application/json" ],
@@ -407,7 +407,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "Account" ],
+        "tags" : [ "Bank Account" ],
         "summary" : "Desactivar cuenta bancaria.",
         "description" : "Nunca se elimina un cuenta. Cambia el campo isLocked a TRUE",
         "parameters" : [ {
