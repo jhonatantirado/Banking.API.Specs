@@ -65,6 +65,14 @@
         "description" : "consultar lista de clientes paginados",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "offset",
+          "in" : "path",
+          "required" : true
+        }, {
+          "name" : "limit",
+          "in" : "query"
+        } ],
         "responses" : {
           "201" : {
             "description" : "Lista de clientes",
