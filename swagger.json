@@ -183,6 +183,11 @@
         "lastName" : {
           "type" : "string"
         },
+        "birthDate" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "fecha de nacimiento"
+        },
         "isActive" : {
           "type" : "string",
           "default" : true
@@ -194,7 +199,8 @@
           "type" : "string"
         },
         "documentNumber" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "número de DNI"
         }
       }
     },
