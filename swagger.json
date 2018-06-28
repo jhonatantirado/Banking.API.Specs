@@ -250,7 +250,7 @@
         }
       }
     },
-    "/api/account" : {
+    "/api/bankAccount" : {
       "post" : {
         "tags" : [ "Bank Account" ],
         "summary" : "Crear cuenta bancaria",
@@ -328,7 +328,7 @@
         }
       }
     },
-    "/api/account/{AccountId}" : {
+    "/api/bankAccount/{AccountId}" : {
       "get" : {
         "tags" : [ "Bank Account" ],
         "summary" : "Detalles de una cuenta bancaria",
