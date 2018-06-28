@@ -58,7 +58,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/customer/find" : {
       "get" : {
         "tags" : [ "Customer" ],
         "summary" : "Listar clientes",
@@ -66,12 +68,19 @@
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
+          "in" : "query",
           "name" : "offset",
-          "in" : "path",
-          "required" : true
+          "schema" : {
+            "type" : "integer"
+          },
+          "description" : "The number of items to skip before starting to collect the result set"
         }, {
+          "in" : "query",
           "name" : "limit",
-          "in" : "query"
+          "schema" : {
+            "type" : "integer"
+          },
+          "description" : "The numbers of items to return"
         } ],
         "responses" : {
           "201" : {
