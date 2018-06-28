@@ -99,7 +99,7 @@
       "delete" : {
         "tags" : [ "Customer" ],
         "summary" : "Desactivar cliente.",
-        "description" : "Nunca se elimina un cliente",
+        "description" : "Nunca se elimina un cliente. Cambia el campo IsActive a FALSE",
         "parameters" : [ {
           "name" : "CustomerId",
           "in" : "path",
