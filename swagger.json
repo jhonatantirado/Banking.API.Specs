@@ -285,6 +285,47 @@
             }
           }
         }
+      },
+      "get" : {
+        "tags" : [ "Account" ],
+        "summary" : "Listar cuentas bancarias",
+        "description" : "consultar lista de cuentas bancarias paginadas",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "offset",
+          "type" : "integer",
+          "description" : "Elemento a partir del cual traer los resultados"
+        }, {
+          "in" : "query",
+          "name" : "limit",
+          "type" : "integer",
+          "description" : "Número de elementos a listar."
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Lista de cuentas bancarias",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RequestBankAccountDTO"
+              }
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
       }
     }
   },
