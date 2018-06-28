@@ -175,12 +175,15 @@
     },
     "RequestCustomerDTO" : {
       "type" : "object",
-      "required" : [ "firstName", "lastName", "email", "cellphone", "documentNumber" ],
+      "required" : [ "firstName", "lastName", "documentNumber" ],
       "properties" : {
         "firstName" : {
           "type" : "string"
         },
         "lastName" : {
+          "type" : "string"
+        },
+        "isActive" : {
           "type" : "string"
         },
         "cellphone" : {
