@@ -324,8 +324,11 @@
     },
     "ResponseCustomerDTO" : {
       "type" : "object",
-      "required" : [ "firstName", "lastName", "birthDate", "documentNumber", "isActive" ],
       "properties" : {
+        "customerId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "firstName" : {
           "type" : "string"
         },
