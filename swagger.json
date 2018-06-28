@@ -71,12 +71,12 @@
           "in" : "query",
           "name" : "offset",
           "type" : "integer",
-          "description" : "The number of items to skip before starting to collect the result set."
+          "description" : "Elemento a partir del cual traer los resultados"
         }, {
           "in" : "query",
           "name" : "limit",
           "type" : "integer",
-          "description" : "The numbers of items to return."
+          "description" : "Número de clientes a listar."
         } ],
         "responses" : {
           "201" : {
