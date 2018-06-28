@@ -75,7 +75,7 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "Transferencia bancaria exitosa",
+            "description" : "Cliente actualizado",
             "schema" : {
               "$ref" : "#/definitions/ResponseOKDTO"
             }
@@ -91,6 +91,15 @@
             "schema" : {
               "$ref" : "#/definitions/ResponseErrorDTO"
             }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Desactivar cliente.",
+        "description" : "Nunca se elimina un cliente",
+        "responses" : {
+          "200" : {
+            "description" : "OK"
           }
         }
       }
