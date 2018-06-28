@@ -97,6 +97,7 @@
     },
     "/api/customer/{CustomerId}" : {
       "delete" : {
+        "tags" : [ "Customer" ],
         "summary" : "Desactivar cliente.",
         "description" : "Nunca se elimina un cliente",
         "parameters" : [ {
