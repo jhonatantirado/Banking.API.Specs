@@ -175,7 +175,7 @@
     },
     "RequestCustomerDTO" : {
       "type" : "object",
-      "required" : [ "firstName", "lastName", "documentNumber" ],
+      "required" : [ "firstName", "lastName", "documentNumber", "isActive" ],
       "properties" : {
         "firstName" : {
           "type" : "string"
@@ -184,7 +184,8 @@
           "type" : "string"
         },
         "isActive" : {
-          "type" : "string"
+          "type" : "string",
+          "default" : true
         },
         "cellphone" : {
           "type" : "string"
