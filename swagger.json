@@ -58,6 +58,33 @@
             }
           }
         }
+      },
+      "get" : {
+        "tags" : [ "Customer" ],
+        "summary" : "Listar clientes",
+        "description" : "consultar lista de clientes paginados",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "201" : {
+            "description" : "Cliente actualizado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
       }
     },
     "/api/customer/{CustomerId}" : {
