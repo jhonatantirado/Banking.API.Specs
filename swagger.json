@@ -21,6 +21,9 @@
   }, {
     "name" : "Banking Transactions",
     "description" : "Transacciones bancarias"
+  }, {
+    "name" : "Security",
+    "description" : "seguridad de la aplicación web"
   } ],
   "paths" : {
     "/api/customer" : {
