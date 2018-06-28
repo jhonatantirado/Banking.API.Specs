@@ -95,6 +95,7 @@
         }
       },
       "delete" : {
+        "tags" : [ "Customer" ],
         "summary" : "Desactivar cliente.",
         "description" : "Nunca se elimina un cliente",
         "responses" : {
