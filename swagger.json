@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "Especificación API de aplicación para banca en línea",
+    "description" : "Especificación API de aplicación para banca en línea del curso Ambientes de Desarrollo de Software",
     "version" : "1.0.0",
     "title" : "Online Banking API 1.0",
     "contact" : {
