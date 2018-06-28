@@ -327,6 +327,118 @@
           }
         }
       }
+    },
+    "/api/account/{AccountId}" : {
+      "get" : {
+        "tags" : [ "Account" ],
+        "summary" : "Detalles de un cliente",
+        "description" : "Ver detalles de un cliente",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "AccountId",
+          "in" : "path",
+          "description" : "Customer ID a ser consultado",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Cliente consultado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseCustomerDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Account" ],
+        "description" : "actualización de cliente",
+        "summary" : "Actualizar cliente",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "AccountId",
+          "in" : "path",
+          "description" : "Customer ID a ser actualizado",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "RequestCustomerDto",
+          "description" : "DTO cliente",
+          "schema" : {
+            "$ref" : "#/definitions/RequestCustomerDTO"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Cliente actualizado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Account" ],
+        "summary" : "Desactivar cliente.",
+        "description" : "Nunca se elimina un cliente. Cambia el campo IsActive a FALSE",
+        "parameters" : [ {
+          "name" : "AccountId",
+          "in" : "path",
+          "description" : "Customer ID a ser desactivado",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Cliente desactivado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
