@@ -458,7 +458,17 @@
           "in" : "formData",
           "name" : "password",
           "type" : "string",
-          "description" : "contraseña."
+          "description" : "contraseña"
+        }, {
+          "in" : "formData",
+          "name" : "grant_type",
+          "type" : "string",
+          "description" : "tipo de seguridad. Por defecto PASSWORD"
+        }, {
+          "in" : "formData",
+          "name" : "scope",
+          "type" : "string",
+          "description" : "ámbito de la seguridad. Por defecto CLEANARCHITECTURE"
         } ],
         "responses" : {
           "201" : {
