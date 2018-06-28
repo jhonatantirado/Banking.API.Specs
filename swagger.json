@@ -331,23 +331,23 @@
     "/api/account/{AccountId}" : {
       "get" : {
         "tags" : [ "Account" ],
-        "summary" : "Detalles de un cliente",
-        "description" : "Ver detalles de un cliente",
+        "summary" : "Detalles de una cuenta bancaria",
+        "description" : "Ver detalles de una cuenta bancaria",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "AccountId",
           "in" : "path",
-          "description" : "Customer ID a ser consultado",
+          "description" : "Account ID a ser consultado",
           "required" : true,
           "type" : "integer",
           "format" : "int64"
         } ],
         "responses" : {
           "201" : {
-            "description" : "Cliente consultado",
+            "description" : "Cuenta bancaria consultada",
             "schema" : {
-              "$ref" : "#/definitions/ResponseCustomerDTO"
+              "$ref" : "#/definitions/RequestBankAccountDTO"
             }
           },
           "400" : {
