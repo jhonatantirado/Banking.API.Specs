@@ -175,7 +175,7 @@
     },
     "RequestCustomerDTO" : {
       "type" : "object",
-      "required" : [ "firstName", "lastName" ],
+      "required" : [ "firstName", "lastName", "email", "cellphone", "documentNumber" ],
       "properties" : {
         "firstName" : {
           "type" : "string"
