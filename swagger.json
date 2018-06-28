@@ -67,7 +67,7 @@
         "produces" : [ "application/json" ],
         "responses" : {
           "201" : {
-            "description" : "Cliente actualizado",
+            "description" : "Lista de clientes",
             "schema" : {
               "$ref" : "#/definitions/RequestCustomerDTO"
             }
