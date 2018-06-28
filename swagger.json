@@ -32,7 +32,7 @@
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
-          "name" : "RequestCustomerDto",
+          "name" : "RequestBankAccountDto",
           "description" : "DTO cliente",
           "schema" : {
             "$ref" : "#/definitions/RequestCustomerDTO"
