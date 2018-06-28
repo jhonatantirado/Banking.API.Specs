@@ -69,7 +69,7 @@
           "201" : {
             "description" : "Cliente actualizado",
             "schema" : {
-              "$ref" : "#/definitions/ResponseOKDTO"
+              "$ref" : "#/definitions/RequestCustomerDTO"
             }
           },
           "400" : {
