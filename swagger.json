@@ -600,6 +600,7 @@
     },
     "RequestBankAccountDTO" : {
       "type" : "object",
+      "required" : [ "id", "number", "balance", "isLocked", "customerId" ],
       "properties" : {
         "id" : {
           "type" : "integer",
