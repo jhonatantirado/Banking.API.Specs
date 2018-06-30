@@ -1,0 +1,12 @@
+CREATE TABLE user (
+  User_Id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  UserName VARCHAR(100)  NOT NULL,
+  PasswordHash VARCHAR(500)  NOT NULL,
+  PasswordSalt VARCHAR(500)  NOT NULL,
+  IsActive BOOLEAN NOT NULL DEFAULT '1',
+  Role_Id BIGINT UNSIGNED NOT NULL,
+  PRIMARY KEY (User_Id),
+  INDEX IX_user_role_id (Role_Id),
+  UNIQUE INDEX UQ_user_username (UserName),
+  CONSTRAINT FK_user_role_id FOREIGN KEY (Role_Id) REFERENCES Role (Role_Id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
