@@ -614,6 +614,10 @@
         },
         "isLocked" : {
           "type" : "boolean"
+        },
+        "customerId" : {
+          "type" : "integer",
+          "format" : "int32"
         }
       }
     },
