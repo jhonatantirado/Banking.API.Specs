@@ -567,6 +567,10 @@
         },
         "password" : {
           "type" : "string"
+        },
+        "id_rol" : {
+          "type" : "integer",
+          "format" : "int64"
         }
       }
     },
