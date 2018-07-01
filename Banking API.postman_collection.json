@@ -1,0 +1,963 @@
+{
+	"info": {
+		"_postman_id": "84c687a5-bd64-48c4-b496-bf301c4c436e",
+		"name": "Banking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Customer JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/customers/customer",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"customers",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"José\",\r\n  \"lastName\": \"de San Martín\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"28071821\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"libertador@peru.pe\",\r\n  \"user\": \"libertador\",\r\n  \"password\": \"independencia\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/customer",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/customers/customer/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"customers",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel José\",\r\n  \"lastName\": \"Grau Seminario\",\r\n  \"birthDate\": \"1960-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888778\",\r\n  \"email\": \"miguel.grau.s@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamosx\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/customer",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by Id JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/customers/customer/3",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"customers",
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by Id NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/customer/3",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer All JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/customers/customer/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"customers",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer All NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/customer/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/customers/customer/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"customers",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/customer?Id=4",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Bank Account NetCore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"number\": \"123-456-003\",\r\n  \"balance\": 0,\r\n  \"isLocked\": false,\r\n  \"customerId\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/BankAccount",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"BankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Bank Account JAVA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"number\": \"123-456-003\",\r\n  \"balance\": 0,\r\n  \"isLocked\": false,\r\n  \"customerId\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/Accounts/BankAccount",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"Accounts",
+								"BankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bank Account NetCore",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 5,\r\n  \"number\": \"123-456-005\",\r\n  \"balance\": 0,\r\n  \"isLocked\": false,\r\n  \"customerId\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/BankAccount",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"BankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bank Account JAVA",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 5,\r\n  \"number\": \"123-456-005\",\r\n  \"balance\": 0,\r\n  \"isLocked\": false,\r\n  \"customerId\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/Accounts/BankAccount",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"Accounts",
+								"BankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bank Account NetCore",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/BankAccount?Id=5",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"BankAccount"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bank Account JAVA",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/Accounts/BankAccount?Id=5",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"Accounts",
+								"BankAccount"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer All NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/BankAccount/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"BankAccount",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer All JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/Accounts/BankAccount/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"Accounts",
+								"BankAccount",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by Id NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/BankAccount/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"BankAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by Id JAVA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Miguel\",\r\n  \"lastName\": \"Grau\",\r\n  \"birthDate\": \"1950-07-28\",\r\n  \"documentNumber\": \"08101879\",\r\n  \"isActive\": \"1\",\r\n  \"cellphone\": \"999888777\",\r\n  \"email\": \"miguel.grau@peru.pe\",\r\n  \"user\": \"miguel.grau\",\r\n  \"password\": \"combatedeangamos\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/Accounts/BankAccount/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"Accounts",
+								"BankAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transfers",
+			"description": "",
+			"item": [
+				{
+					"name": "Transferencia Bancaria Pivotal Java",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fromAccountNumber\": \"123-456-002\",\r\n  \"toAccountNumber\": \"123-456-001\",\r\n  \"amount\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://{{serverJava}}/api/transfers",
+							"protocol": "https",
+							"host": [
+								"{{serverJava}}"
+							],
+							"path": [
+								"api",
+								"transfers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia Bancaria Pivotal NetCore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fromAccountNumber\": \"123-456-002\",\r\n  \"toAccountNumber\": \"123-456-001\",\r\n  \"amount\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://{{serverNetCore}}/api/transfers",
+							"protocol": "https",
+							"host": [
+								"{{serverNetCore}}"
+							],
+							"path": [
+								"api",
+								"transfers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia Bancaria JAVA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fromAccountNumber\": \"123-456-002\",\r\n  \"toAccountNumber\": \"123-456-001\",\r\n  \"amount\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/transfers",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"transfers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia Bancaria NetCore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fromAccountNumber\": \"123-456-002\",\r\n  \"toAccountNumber\": \"123-456-001\",\r\n  \"amount\": 10\r\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/transfers",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"transfers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Security",
+			"description": "",
+			"item": [
+				{
+					"name": "Get token for User NetCore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jhonatan.tirado",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "CLEANARCHITECTURE",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portNetCore}}/api/token",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portNetCore}}",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get token for User Java",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jhonatan.tirado",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "CLEANARCHITECTURE",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}:{{portJava}}/api/token",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{portJava}}",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hola Mundo JAVA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{server}}:{{portJava}}/api/index",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{portJava}}",
+					"path": [
+						"api",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hola Mundo NetCore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{server}}:{{portNetCore}}/api/index",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{portNetCore}}",
+					"path": [
+						"api",
+						"index"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
