@@ -561,6 +561,12 @@
         },
         "email" : {
           "type" : "string"
+        },
+        "user" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
         }
       }
     },
