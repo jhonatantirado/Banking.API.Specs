@@ -535,7 +535,7 @@
     },
     "RequestCustomerDTO" : {
       "type" : "object",
-      "required" : [ "firstName", "lastName", "birthDate", "documentNumber", "isActive" ],
+      "required" : [ "firstName", "lastName", "birthDate", "documentNumber", "isActive", "id_rol" ],
       "properties" : {
         "firstName" : {
           "type" : "string"
