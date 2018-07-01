@@ -26,7 +26,7 @@
     "description" : "seguridad de la aplicación web"
   } ],
   "paths" : {
-    "/api/customer" : {
+    "/api/Customers/customer" : {
       "post" : {
         "tags" : [ "Customer" ],
         "description" : "creación de cliente",
@@ -104,7 +104,7 @@
         }
       }
     },
-    "/api/customer/{CustomerId}" : {
+    "/api/Customers/customer/{CustomerId}" : {
       "get" : {
         "tags" : [ "Customer" ],
         "summary" : "Detalles de un cliente",
@@ -253,7 +253,7 @@
         }
       }
     },
-    "/api/bankAccount" : {
+    "/api/Accounts/bankAccount" : {
       "post" : {
         "tags" : [ "Bank Account" ],
         "summary" : "Crear cuenta bancaria",
@@ -331,7 +331,7 @@
         }
       }
     },
-    "/api/bankAccount/{AccountId}" : {
+    "/api/Accounts/bankAccount/{AccountId}" : {
       "get" : {
         "tags" : [ "Bank Account" ],
         "summary" : "Detalles de una cuenta bancaria",
@@ -561,6 +561,12 @@
         },
         "email" : {
           "type" : "string"
+        },
+        "user" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
         }
       }
     },
@@ -614,7 +620,8 @@
           "format" : "float"
         },
         "isLocked" : {
-          "type" : "boolean"
+          "type" : "boolean",
+          "default" : false
         },
         "customerId" : {
           "type" : "integer",
