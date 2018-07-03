@@ -511,9 +511,9 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "Token generado. El campo message contiene el token JWT generado",
+            "description" : "Usuario consultado",
             "schema" : {
-              "$ref" : "#/definitions/ResponseOKDTO"
+              "$ref" : "#/definitions/ResponseCustomerDTO"
             }
           },
           "400" : {
