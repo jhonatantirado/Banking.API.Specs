@@ -495,8 +495,8 @@
     "/api/login" : {
       "post" : {
         "tags" : [ "Security" ],
-        "summary" : "Autenticación",
-        "description" : "Permitir al usuario inicar sesión en base a usuario y contraseña",
+        "summary" : "Validación de usuario y contraseña",
+        "description" : "devolver datos de usuario logeado",
         "consumes" : [ "application/x-www-form-urlencoded" ],
         "parameters" : [ {
           "in" : "formData",
@@ -508,16 +508,6 @@
           "name" : "password",
           "type" : "string",
           "description" : "contraseña"
-        }, {
-          "in" : "formData",
-          "name" : "grant_type",
-          "type" : "string",
-          "description" : "tipo de seguridad. Por defecto PASSWORD"
-        }, {
-          "in" : "formData",
-          "name" : "scope",
-          "type" : "string",
-          "description" : "ámbito de la seguridad. Por defecto CLEANARCHITECTURE"
         } ],
         "responses" : {
           "201" : {
