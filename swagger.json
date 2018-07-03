@@ -550,7 +550,7 @@
         },
         "documentNumber" : {
           "type" : "string",
-          "description" : "número de DNI"
+          "description" : "número de DNI, único"
         },
         "isActive" : {
           "type" : "string",
@@ -563,7 +563,8 @@
           "type" : "string"
         },
         "user" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "nombre de usuario, único"
         },
         "password" : {
           "type" : "string"
