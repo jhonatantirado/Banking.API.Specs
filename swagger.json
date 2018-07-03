@@ -511,7 +511,7 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "Usuario consultado",
+            "description" : "Usuario logeado",
             "schema" : {
               "$ref" : "#/definitions/ResponseCustomerDTO"
             }
@@ -645,6 +645,14 @@
         },
         "email" : {
           "type" : "string"
+        },
+        "BankAccounts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/RequestBankAccountDTO"
+          },
+          "maxItems" : 100,
+          "uniqueItems" : true
         }
       }
     },
