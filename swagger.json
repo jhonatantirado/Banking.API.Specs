@@ -570,6 +570,55 @@
           }
         }
       }
+    },
+    "/api/Customers/login/{user}/{password}" : {
+      "get" : {
+        "tags" : [ "Security" ],
+        "summary" : "Generación de token de seguridad",
+        "description" : "generar token en base a usuario y contraseña",
+        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "parameters" : [ {
+          "in" : "formData",
+          "name" : "username",
+          "type" : "string",
+          "description" : "nombre de usuario"
+        }, {
+          "in" : "formData",
+          "name" : "password",
+          "type" : "string",
+          "description" : "contraseña"
+        }, {
+          "in" : "formData",
+          "name" : "grant_type",
+          "type" : "string",
+          "description" : "tipo de seguridad. Por defecto PASSWORD"
+        }, {
+          "in" : "formData",
+          "name" : "scope",
+          "type" : "string",
+          "description" : "ámbito de la seguridad. Por defecto CLEANARCHITECTURE"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Token generado. El campo message contiene el token JWT generado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
