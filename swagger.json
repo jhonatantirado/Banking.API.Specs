@@ -576,27 +576,20 @@
         "tags" : [ "Security" ],
         "summary" : "Login",
         "description" : "Autenticación en base a usuario y contraseña",
-        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
         "parameters" : [ {
-          "in" : "formData",
-          "name" : "username",
+          "in" : "path",
+          "name" : "user",
           "type" : "string",
-          "description" : "nombre de usuario"
+          "description" : "nombre de usuario",
+          "required" : true
         }, {
-          "in" : "formData",
+          "in" : "path",
           "name" : "password",
           "type" : "string",
-          "description" : "contraseña"
-        }, {
-          "in" : "formData",
-          "name" : "grant_type",
-          "type" : "string",
-          "description" : "tipo de seguridad. Por defecto PASSWORD"
-        }, {
-          "in" : "formData",
-          "name" : "scope",
-          "type" : "string",
-          "description" : "ámbito de la seguridad. Por defecto CLEANARCHITECTURE"
+          "description" : "contraseña",
+          "required" : true
         } ],
         "responses" : {
           "201" : {
