@@ -574,8 +574,8 @@
     "/api/Customers/login/{user}/{password}" : {
       "get" : {
         "tags" : [ "Security" ],
-        "summary" : "Generación de token de seguridad",
-        "description" : "generar token en base a usuario y contraseña",
+        "summary" : "Login",
+        "description" : "Autenticación en base a usuario y contraseña",
         "consumes" : [ "application/x-www-form-urlencoded" ],
         "parameters" : [ {
           "in" : "formData",
