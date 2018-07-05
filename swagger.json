@@ -593,9 +593,12 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "Token generado. El campo message contiene el token JWT generado",
+            "description" : "Lista de clientes",
             "schema" : {
-              "$ref" : "#/definitions/ResponseOKDTO"
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RequestCustomerDTO"
+              }
             }
           },
           "400" : {
