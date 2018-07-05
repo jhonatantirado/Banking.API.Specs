@@ -645,14 +645,6 @@
         },
         "email" : {
           "type" : "string"
-        },
-        "BankAccounts" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/RequestBankAccountDTO"
-          },
-          "maxItems" : 100,
-          "uniqueItems" : true
         }
       }
     },
