@@ -462,7 +462,10 @@
           "201" : {
             "description" : "Cuenta bancaria consultada",
             "schema" : {
-              "$ref" : "#/definitions/RequestBankAccountDTO"
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RequestBankAccountDTO"
+              }
             }
           },
           "400" : {
