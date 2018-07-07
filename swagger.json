@@ -844,6 +844,10 @@
           "minimum" : 0,
           "maximum" : 1000,
           "description" : "monto de dinero transferido en moneda local (soles peruano)"
+        },
+        "transferDate" : {
+          "type" : "string",
+          "format" : "date"
         }
       }
     }
