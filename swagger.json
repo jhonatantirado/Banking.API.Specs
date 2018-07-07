@@ -268,9 +268,9 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "Transferencia bancaria exitosa",
+            "description" : "Lista de transferencias",
             "schema" : {
-              "$ref" : "#/definitions/ResponseOKDTO"
+              "$ref" : "#/definitions/ResponseBankTransferDto"
             }
           },
           "400" : {
