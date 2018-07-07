@@ -562,6 +562,9 @@
               "$ref" : "#/definitions/ResponseErrorDTO"
             }
           },
+          "401" : {
+            "description" : "Unauthorized access"
+          },
           "500" : {
             "description" : "Error no controlado",
             "schema" : {
