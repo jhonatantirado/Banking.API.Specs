@@ -261,7 +261,7 @@
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "CustomerId",
+          "name" : "CustomerIdx",
           "in" : "query",
           "description" : "Customer ID a ser consultado",
           "required" : true,
