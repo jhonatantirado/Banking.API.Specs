@@ -254,23 +254,61 @@
       }
     },
     "/api/Accounts/bankAccount" : {
-      "get" : {
+      "post" : {
         "tags" : [ "Bank Account" ],
-        "summary" : "Lista de cuentas bancarias por cliente",
-        "description" : "Cuentas bancarias por cliente",
+        "summary" : "Crear cuenta bancaria",
+        "description" : "Crear una cuenta bancaria y asociarla a un cliente",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "CustomerIdx",
-          "in" : "query",
-          "description" : "Customer ID a ser consultado",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
+          "in" : "body",
+          "name" : "RequestBankAccountDTO",
+          "description" : "DTO cuenta bancaria",
+          "schema" : {
+            "$ref" : "#/definitions/RequestBankAccountDTO"
+          }
         } ],
         "responses" : {
           "201" : {
-            "description" : "Cuenta bancaria consultada",
+            "description" : "Cuenta bancaria creada",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      },
+      "get" : {
+        "tags" : [ "Bank Account" ],
+        "summary" : "Listar cuentas bancarias",
+        "description" : "consultar lista de cuentas bancarias paginadas",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "offset",
+          "type" : "integer",
+          "description" : "Elemento a partir del cual traer los resultados"
+        }, {
+          "in" : "query",
+          "name" : "limit",
+          "type" : "integer",
+          "description" : "Número de elementos a listar."
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Lista de cuentas bancarias",
             "schema" : {
               "type" : "array",
               "items" : {
@@ -388,6 +426,46 @@
             "description" : "Cuenta bancaria desactivada",
             "schema" : {
               "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Accounts/bankAccount/{CustomerId}" : {
+      "get" : {
+        "tags" : [ "Bank Account" ],
+        "summary" : "Lista de cuentas bancarias por cliente",
+        "description" : "Cuentas bancarias por cliente",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "CustomerId",
+          "in" : "path",
+          "description" : "Customer ID a ser consultado",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Cuenta bancaria consultada",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RequestBankAccountDTO"
+              }
             }
           },
           "400" : {
