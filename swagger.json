@@ -253,6 +253,41 @@
         }
       }
     },
+    "/api/transfers/{CustomerId}" : {
+      "get" : {
+        "tags" : [ "Banking Transactions" ],
+        "summary" : "muestra las últimas 20 transacciones del cliente",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "CustomerId",
+          "type" : "integer",
+          "required" : true,
+          "description" : "Customer ID a ser consultado"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Transferencia bancaria exitosa",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseOKDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
+    },
     "/api/Accounts/bankAccount" : {
       "post" : {
         "tags" : [ "Bank Account" ],
