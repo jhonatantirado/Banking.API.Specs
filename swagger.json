@@ -822,6 +822,30 @@
           "description" : "monto de dinero a transferir en moneda local (soles peruanos), mayor a CERO y menor a 1000"
         }
       }
+    },
+    "ResponseBankTransferDto" : {
+      "type" : "object",
+      "required" : [ "fromAccountNumber", "toAccountNumber", "amount" ],
+      "properties" : {
+        "fromAccountNumber" : {
+          "type" : "string",
+          "description" : "cuenta origen",
+          "example" : "123-456-001"
+        },
+        "toAccountNumber" : {
+          "type" : "string",
+          "description" : "cuenta destino",
+          "example" : "123-456-002"
+        },
+        "amount" : {
+          "type" : "number",
+          "format" : "double",
+          "example" : 100.0,
+          "minimum" : 0,
+          "maximum" : 1000,
+          "description" : "monto de dinero a transferir en moneda local (soles peruanos), mayor a CERO y menor a 1000"
+        }
+      }
     }
   },
   "host" : "virtserver.swaggerhub.com",
