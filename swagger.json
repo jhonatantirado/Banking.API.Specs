@@ -843,7 +843,7 @@
           "example" : 100.0,
           "minimum" : 0,
           "maximum" : 1000,
-          "description" : "monto de dinero a transferir en moneda local (soles peruanos), mayor a CERO y menor a 1000"
+          "description" : "monto de dinero transferido en moneda local (soles peruano)"
         }
       }
     }
