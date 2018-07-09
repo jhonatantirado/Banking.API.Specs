@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "Especificación API de aplicación para banca en línea del curso Ambientes de Desarrollo de Software",
+    "description" : "Especificación API de aplicación para banca en línea del curso Ambientes de Desarrollo de Software 2018-1",
     "version" : "1.0.0",
     "title" : "Online Banking API 1.1",
     "contact" : {
@@ -656,6 +656,42 @@
           }
         }
       }
+    },
+    "/api/Customers/findByDocumentNumber" : {
+      "get" : {
+        "tags" : [ "Customer" ],
+        "summary" : "Buscar cliente por número de documento",
+        "description" : "Buscar cliente por número de documento",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "documentNumber",
+          "type" : "string",
+          "description" : "número de documento",
+          "required" : true
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "cliente",
+            "schema" : {
+              "$ref" : "#/definitions/RequestCustomerDTO"
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
@@ -847,7 +883,8 @@
         },
         "transferDate" : {
           "type" : "string",
-          "format" : "date-time"
+          "format" : "date-time",
+          "description" : "fecha y hora de transferencia"
         }
       }
     }
