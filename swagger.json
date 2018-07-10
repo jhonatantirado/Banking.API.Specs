@@ -518,7 +518,7 @@
         }
       }
     },
-    "/api/Accounts/findByAccountNumber/{AccountNumber}" : {
+    "/api/Accounts/findByAccountNumber/" : {
       "get" : {
         "tags" : [ "Bank Account" ],
         "summary" : "Buscar cuenta bancaria por número de cuenta",
@@ -526,12 +526,11 @@
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "AccountNumber",
-          "in" : "path",
-          "description" : "Número de cuenta a ser consultado",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
+          "in" : "query",
+          "name" : "accountNumber",
+          "type" : "string",
+          "description" : "número de cuenta",
+          "required" : true
         } ],
         "responses" : {
           "201" : {
