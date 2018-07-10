@@ -518,7 +518,7 @@
         }
       }
     },
-    "/api/Accounts/findByAccountNumber/" : {
+    "/api/Accounts/findByAccountNumber" : {
       "get" : {
         "tags" : [ "Bank Account" ],
         "summary" : "Buscar cuenta bancaria por número de cuenta",
