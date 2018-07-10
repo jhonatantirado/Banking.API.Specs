@@ -518,6 +518,46 @@
         }
       }
     },
+    "/api/Accounts/findByAccountNumber/{AccountNumber}" : {
+      "get" : {
+        "tags" : [ "Bank Account" ],
+        "summary" : "Buscar cuenta bancaria por número de cuenta",
+        "description" : "Cuenta bancaria por número de cuenta",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "AccountNumber",
+          "in" : "path",
+          "description" : "Número de cuenta a ser consultado",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Cuenta bancaria consultada",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RequestBankAccountDTO"
+              }
+            }
+          },
+          "400" : {
+            "description" : "Error controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          },
+          "500" : {
+            "description" : "Error no controlado",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseErrorDTO"
+            }
+          }
+        }
+      }
+    },
     "/api/token" : {
       "post" : {
         "tags" : [ "Security" ],
