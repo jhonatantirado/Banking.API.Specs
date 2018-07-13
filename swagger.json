@@ -557,55 +557,6 @@
         }
       }
     },
-    "/api/token" : {
-      "post" : {
-        "tags" : [ "Security" ],
-        "summary" : "Generación de token de seguridad",
-        "description" : "generar token en base a usuario y contraseña",
-        "consumes" : [ "application/x-www-form-urlencoded" ],
-        "parameters" : [ {
-          "in" : "formData",
-          "name" : "username",
-          "type" : "string",
-          "description" : "nombre de usuario"
-        }, {
-          "in" : "formData",
-          "name" : "password",
-          "type" : "string",
-          "description" : "contraseña"
-        }, {
-          "in" : "formData",
-          "name" : "grant_type",
-          "type" : "string",
-          "description" : "tipo de seguridad. Por defecto PASSWORD"
-        }, {
-          "in" : "formData",
-          "name" : "scope",
-          "type" : "string",
-          "description" : "ámbito de la seguridad. Por defecto CLEANARCHITECTURE"
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "Token generado. El campo message contiene el token JWT generado",
-            "schema" : {
-              "$ref" : "#/definitions/ResponseOKDTO"
-            }
-          },
-          "400" : {
-            "description" : "Error controlado",
-            "schema" : {
-              "$ref" : "#/definitions/ResponseErrorDTO"
-            }
-          },
-          "500" : {
-            "description" : "Error no controlado",
-            "schema" : {
-              "$ref" : "#/definitions/ResponseErrorDTO"
-            }
-          }
-        }
-      }
-    },
     "/api/login" : {
       "post" : {
         "tags" : [ "Security" ],
@@ -638,51 +589,6 @@
           },
           "401" : {
             "description" : "Unauthorized access",
-            "schema" : {
-              "$ref" : "#/definitions/ResponseErrorDTO"
-            }
-          },
-          "500" : {
-            "description" : "Error no controlado",
-            "schema" : {
-              "$ref" : "#/definitions/ResponseErrorDTO"
-            }
-          }
-        }
-      }
-    },
-    "/api/Customers/login/{user}/{password}" : {
-      "get" : {
-        "tags" : [ "Security" ],
-        "summary" : "Login",
-        "description" : "Autenticación en base a usuario y contraseña",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "in" : "path",
-          "name" : "user",
-          "type" : "string",
-          "description" : "nombre de usuario",
-          "required" : true
-        }, {
-          "in" : "path",
-          "name" : "password",
-          "type" : "string",
-          "description" : "contraseña",
-          "required" : true
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "Lista de clientes",
-            "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/RequestCustomerDTO"
-              }
-            }
-          },
-          "400" : {
-            "description" : "Error controlado",
             "schema" : {
               "$ref" : "#/definitions/ResponseErrorDTO"
             }
